@@ -17,5 +17,5 @@ class Customer extends React.Component{
         )
     }
 }
-
+ 
 export default Customer;  /*내보내기 */

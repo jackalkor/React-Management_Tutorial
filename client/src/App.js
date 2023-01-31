@@ -21,19 +21,23 @@ const styles = theme => ({
 });
 
 class App extends Component {
+
     state ={
       customers:''
     }
+
     componentDidMount(){
       this.callApi()
         .then(res => this.setState({customers: res}))
         .catch(err => console.log(err));
     }
+
     callApi = async () => {
       const response = await fetch('/api/customers');
       const body = await response.json();
       return body;
     }
+    
     render() {
       const { classes } = this.props;
       return (
